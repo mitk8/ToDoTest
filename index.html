@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Backendless Project Template</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="/src/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+</head>
+<body class="">
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid bg-white">
+      <div class="container">
+        <h1 class="display-1"><strong> Andrey's To-Do <i class="fas fa-clipboard-list"></i></strong></h1>
+        <p class="lead">This is a to-do list I created. It is very simple, yet there are a lot of things happening behind the scenes. <br> This little project uses HTML, CSS, JavaScript, Bootstrap, Backendless and Font Awesome API. <br>Everything written here is saved online.</p>
+        <hr>
+      </div>
+    </div>
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1> To-Do List:</h1>
+          <ul class="list-group" id="todoListUl">           
+          </ul>
+          <p class="text-secondary my-3" id="noToDos">No to-do items to display. To create a new item please enter your to-do task below.</p>
+          <div class="input-group mb-3 mt-2 ">
+            <input type="text" class="form-control" placeholder="New ToDo Item" aria-label="Recipient's username" aria-describedby="button-addon2" id="newItemInput">
+            <button class="btn btn-outline-success w-25 p-2" type="button" id="addItemButton">Add</button>
+          </div>
+      
+        </div>
+        <div class="col-lg">
+          <h1 class="text-success"> Completed:</h1>
+          <ul class="list-group" id="completListUl">
+            
+          </ul>  
+          <button type="button" class="btn btn-danger mt-2 d-none" id="clearAll">Clear All</button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="footer navbar-fixed-bottom fixed-bottom" style="z-index:1000000000;">
+    <div class="container">
+      <p class="text-center">&COPY; Created by Andrey Mitko</p>
+    </div>
+  </footer>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="editItem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">To-Do Item:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            
+            <input type="text" class="form-control" id="toDoValue" aria-describedby="emailHelp">
+            <small id="todoHelp" class="form-text text-muted">Don't forget to save changes!</small>
+            <small id="changesSavedAllGood" class="form-text text-success d-none">All changes have been saved!</small>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS and Backendless -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <script src="//api.backendless.com/sdk/js/latest/backendless.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

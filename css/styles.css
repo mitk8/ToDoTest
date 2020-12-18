@@ -1,0 +1,9 @@
+
+p .text-secondary {
+    display: inline-block;
+}
+
+
+#completListUl li label{
+    text-decoration: line-through;
+}
